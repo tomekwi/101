@@ -10,7 +10,7 @@
  * @return {boolean} a || b
  */
 
-module.exports = or;
+export default or;
 
 function or (a, b) {
   return a || b;

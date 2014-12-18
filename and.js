@@ -9,7 +9,7 @@
  * @param {*} b - any value
  * @return {boolean} a && b
  */
-module.exports = and;
+export default and;
 
 function and (a, b) {
   return a && b;

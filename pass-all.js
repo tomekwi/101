@@ -2,9 +2,9 @@
  * @module 101/pass-all
  */
 
-var isFunction = require('./is-function');
-var and = require('./and');
-var apply = require('./apply');
+import isFunction from './is-function';
+import and from './and';
+import apply from './apply';
 
 /**
  * Muxes arguments across many functions and &&'s the results
@@ -12,7 +12,7 @@ var apply = require('./apply');
  * @param {function} funcs... - functions which return a boolean
  * @return {function} function which accepts args which it applies to funcs and &&s the results
  */
-module.exports = passAll;
+export default passAll;
 
 function passAll (/* funcs */) {
   var funcs = Array.prototype.slice.call(arguments);

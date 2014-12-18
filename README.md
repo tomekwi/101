@@ -37,7 +37,7 @@ themselves constantly updating their package.json (repeatedly adding and removin
 Just like ES6's `Object.assign`. Extend an object with any number of objects (returns original).
 
 ```js
-var assign = require('101/assign');
+import assign from '101/assign';
 
 var target = { foo: 1 };
 var source1 = { bar: 1 };
@@ -51,7 +51,7 @@ assign(target, source1, source2) // { foo: 1, bar: 1, baz: 1 } target extended w
 Functional version of `&&`. Works great with `array.reduce`.
 
 ```js
-var and = require('101/and');
+import and from '101/and';
 
 and(true, false); // false
 and(true, true);  // true
@@ -63,7 +63,7 @@ Functional version of `function.apply`.
 Supports partial functionality (great with array functions).
 
 ```js
-var apply = require('101/apply');
+import apply from '101/apply';
 [sum].map(apply(null, [1, 2, 3])); // [6] = [sum(1,2,3)] = [1+2+3]
 function sum () {  /* sums all arguments */ }
 apply({ prop: 'val' })(function () { return this.prop; });  // 'val'
@@ -74,7 +74,7 @@ apply({ prop: 'val' })(function () { return this.prop; });  // 'val'
 It's [clone](https://www.npmjs.org/package/clone) (Only exporting this bc it is used internal to 101)
 
 ```js
-var clone = require('101/clone');
+import clone from '101/clone';
 var obj = {
   foo: 1,
   bar: 2
@@ -88,7 +88,7 @@ clone(obj); // { foo: 1, bar: 2 }
 Functional composition method. Works great with `array.reduce`.
 
 ```js
-var compose = require('101/compose');
+import compose from '101/compose';
 
 compose(isNaN, parseInt)('nope'); // isNaN(parseInt('nope')) // true
 ```
@@ -99,7 +99,7 @@ Functional version of `str === process.env.NODE_ENV`.
 Or's multiple environments.
 
 ```js
-var envIs = require('101/env-is');
+import envIs from '101/env-is';
 // process.env.NODE_ENV = development
 envIs('development');     // true
 envIs('production');      // false
@@ -113,7 +113,7 @@ Functional version of `===`.
 Supports partial functionality (great with array functions).
 
 ```js
-var equals = require('101/equals');
+import equals from '101/equals';
 
 equals(1, 1);            // true
 [1,2,3].some(equals(1)); // true
@@ -125,7 +125,7 @@ equals(1, '1');          // false
 Simple exists function.
 
 ```js
-var exists = require('101/exists');
+import exists from '101/exists';
 
 exists('foo');     // true
 exists(null);      // false
@@ -140,8 +140,8 @@ Finds the first value in the list that passes the given function (predicate) and
 If list is not provided find will return a partial-function which accepts a list as the first argument.
 
 ```js
-var find = require('101/find');
-var hasProps = require('101/has-properties');
+import find from '101/find';
+import hasProps from '101/has-properties';
 var arr = [{ a: 1, b: 1 }, { b: 1 }, { c: 1 }];
 
 var item = find(arr, hasProps({ a:1 }));
@@ -157,7 +157,7 @@ Finds the first value in the list that passes the given function (predicate) and
 If list is not provided findIndex will return a partial-function which accepts a list as the first argument.
 
 ```js
-var findIndex = require('101/find-index');
+import findIndex from '101/find-index';
 var arr = [1, 2, 3];
 
 var index = findIndex(arr, function (val, i, arr) {
@@ -173,7 +173,7 @@ Determines whether the keypaths exist and have the specified values.
 Supports partial functionality (great with array functions, and 101/find).
 
 ```js
-var hasKeypaths = require('101/has-keypaths');
+import hasKeypaths from '101/has-keypaths';
 var obj = {
   foo: {
     bar: {
@@ -207,7 +207,7 @@ Determines whether the keys exist and, if specified, has the values.
 Supports partial functionality (great with array functions, and 101/find).
 
 ```js
-var hasProps = require('101/has-properties');
+import hasProps from '101/has-properties';
 var obj = {
   foo: {
     bar: 1
@@ -236,7 +236,7 @@ Functional version of JavaScript's instanceof.
 Supports partial functionality (great with array functions).
 
 ```js
-var instanceOf = require('101/instance-of');
+import instanceOf from '101/instance-of';
 
 ['foo', 'bar', 1].map(instanceOf('string')); // [true, true, false]
 ```
@@ -247,7 +247,7 @@ Functional version of `typeof val === 'boolean'`.
 Supports partial functionality (great with array functions).
 
 ```js
-var isBoolean = require('101/is-boolean');
+import isBoolean from '101/is-boolean';
 
 [true, false, 1].map(isBoolean); // [true, true, false]
 ```
@@ -257,7 +257,7 @@ var isBoolean = require('101/is-boolean');
 Functional version of val empty object, array or object
 
 ```js
-var isEmpty = require('101/is-empty');
+import isEmpty from '101/is-empty';
 
 isEmpty([]); // true
 isEmpty({}); // true
@@ -270,7 +270,7 @@ isEmpty(" "); // false
 Functional version of `typeof val === 'function'`
 
 ```js
-var isFunction = require('101/is-function');
+import isFunction from '101/is-function';
 
 [parseInt, function () {}, 'foo'].map(isFunction); // [true, true, false]
 ```
@@ -280,7 +280,7 @@ var isFunction = require('101/is-function');
 Functional version of val typeof 'number'
 
 ```js
-var isNumber = require('101/is-number');
+import isNumber from '101/is-number';
 
 ['foo', 'bar', 1].map(isString); // [false, false, true]
 ```
@@ -290,7 +290,7 @@ var isNumber = require('101/is-number');
 Functional *strict* version of val typeof 'object' (and not array or regexp)
 
 ```js
-var isObject = require('101/is-object');
+import isObject from '101/is-object';
 
 [{}, { foo: 1 }, 100].map(isObject); // [true, true, false]
 ```
@@ -300,7 +300,7 @@ var isObject = require('101/is-object');
 Functional version of val typeof 'string'
 
 ```js
-var isString = require('101/is-string');
+import isString from '101/is-string';
 
 ['foo', 'bar', 1].map(isString); // [true, true, false]
 ```
@@ -310,7 +310,7 @@ var isString = require('101/is-string');
 Returns the last value of a list
 
 ```js
-var last = require('101/last');
+import last from '101/last';
 
 last([1, 2, 3]); // 3
 last('hello');   // 'o'
@@ -329,7 +329,7 @@ require('101/noop'); // function () {}
 Functional version of `!`.
 
 ```js
-var not = require('101/not');
+import not from '101/not';
 
 not(isString)('hey'); // false
 not(isString)(100);   // true
@@ -341,7 +341,7 @@ Returns a new object without the specified keys.
 Supports partial functionality (great with array functions, like map).
 
 ```js
-var omit = require('101/omit');
+import omit from '101/omit';
 var obj = {
   foo: 1,
   bar: 2
@@ -361,7 +361,7 @@ Functional version of `||`.
 Works great with `array.reduce`.
 
 ```js
-var or = require('101/or');
+import or from '101/or';
 
 or(true, true);   // true
 or(true, false);  // true
@@ -374,7 +374,7 @@ Muxes arguments across many functions and `&&`'s the results.
 Supports partial functionality (great with array functions, like map).
 
 ```js
-var passAll = require('101/pass-all');
+import passAll from '101/pass-all';
 
 ['', 'foo', 'bar', 100].map(passAll(isString, isTruthy)); // [false, true, true, false]
 ```
@@ -385,7 +385,7 @@ Muxes arguments across many functions and `||`'s the results.
 Supports partial functionality (great with array functions, like map).
 
 ```js
-var passAny = require('101/pass-any');
+import passAny from '101/pass-any';
 
 ['', 'foo', 'bar', 100].map(passAny(isString, isNumber)); // [true, true, true, true]
 ```
@@ -396,7 +396,7 @@ Returns a new object with the specified keys (with key values from obj).
 Supports partial functionality (great with array functions, like map).
 
 ```js
-var pick = require('101/pick');
+import pick from '101/pick';
 var obj = {
   foo: 1,
   bar: 2
@@ -416,7 +416,7 @@ Functional version of obj[key], returns the value of the key from obj.
 Supports partial functionality (great with array functions, like map).
 
 ```js
-var pluck = require('101/pluck');
+import pluck from '101/pluck';
 var obj = {
   foo: 1,
   bar: 2
@@ -445,7 +445,7 @@ Functional version of obj[key] = val, returns a new obj with the key and value s
 Supports partial functionality (great with array functions, like map).
 
 ```js
-var set = require('101/set');
+import set from '101/set';
 var obj = {
   foo: 1,
   bar: 2

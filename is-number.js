@@ -9,7 +9,7 @@
  * @param {*} val - value checked to be a string
  * @return {boolean} Whether the value is an string or not
  */
-module.exports = isNumber;
+export default isNumber;
 
 function isNumber (val) {
   return typeof val === 'number' || val instanceof Number;

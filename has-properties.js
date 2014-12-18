@@ -2,9 +2,9 @@
  * @module 101/has-properties
  */
 
-var eql = require('deep-eql');
-var isObject = require('./is-object');
-var isBoolean = require('./is-boolean');
+import eql from 'deep-eql';
+import isObject from './is-object';
+import isBoolean from './is-boolean';
 var isArray = Array.isArray;
 
 /**
@@ -17,7 +17,7 @@ var isArray = Array.isArray;
  *   deep key existance (prototype) when only keys are specified
  * @return {boolean|function} Has keypaths or Partial-function hasProperties (which accepts obj)
  */
-module.exports = function (obj, props, deep) { // deep defaults to true
+export default function (obj, props, deep) { // deep defaults to true
   if (isBoolean(props)) {
     deep = props;
     props = null;

@@ -9,7 +9,7 @@
  * @param {array} args - Arguments applied to fn
  * @return {function} function which accepts a function, fn, and applies thisArg, and args to it. Returns fn.apply(thisArg, args).
  */
-module.exports = apply;
+export default apply;
 
 function apply (thisArg, args) {
   return function (fn) {

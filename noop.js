@@ -5,4 +5,4 @@
 /**
  * Does nothing - no operation
  */
-module.exports = function () {};
+export default function () {};

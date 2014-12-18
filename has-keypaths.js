@@ -2,10 +2,10 @@
  * @module 101/has-keypaths
  */
 
-var eql = require('deep-eql');
-var keypather = require('keypather')();
-var isObject = require('./is-object');
-var isBoolean = require('./is-boolean');
+import eql from 'deep-eql';
+import keypather from 'keypather'();
+import isObject from './is-object';
+import isBoolean from './is-boolean';
 var isArray = Array.isArray;
 
 /**
@@ -18,7 +18,7 @@ var isArray = Array.isArray;
  *   deep keypath existance (prototype) when only keys are specified
  * @return {boolean|function} Has keypaths or Partial-function function hasKeypaths (which accepts obj)
  */
-module.exports = function (obj, keypaths, deep) {
+export default function (obj, keypaths, deep) {
   if (arguments.length === 1) {
     keypaths = obj;
     return function (obj) {

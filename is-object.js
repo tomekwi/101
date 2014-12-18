@@ -8,9 +8,9 @@
  * @param {*} val - value checked to be an object
  * @return {boolean} Whether the value is an object or not
  */
-var exists = require('./exists');
+import exists from './exists';
 
-module.exports = isObject;
+export default isObject;
 
 function isObject (val) {
   return typeof val === 'object' &&

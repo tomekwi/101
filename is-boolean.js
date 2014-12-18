@@ -8,7 +8,7 @@
  * @param {*} val - value checked to be a boolean
  * @return {boolean} Whether the value is a boolean or not
  */
-module.exports = isBoolean;
+export default isBoolean;
 
 function isBoolean (val) {
   return typeof val === 'boolean';

@@ -1,4 +1,4 @@
-var equals = require('./equals');
+import equals from './equals';
 
 /**
  * @module 101/env-is
@@ -10,7 +10,7 @@ var equals = require('./equals');
  * @param {*} array - Array of environments to check
  * @return {boolean} Any of the supplied arguments exists in process.env.NODE_ENV
  */
-module.exports = envIs;
+export default envIs;
 
 function envIs () {
   var args = Array.prototype.slice.call(arguments);

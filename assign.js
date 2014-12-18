@@ -2,8 +2,8 @@
  * @module 101/assign
  */
 
-var isFunction = require('./is-function');
-var exists = require('./exists');
+import isFunction from './is-function';
+import exists from './exists';
 
 /**
  * Copies enumerable and own properties from a source object(s) to a target object, aka extend.
@@ -13,7 +13,7 @@ var exists = require('./exists');
  * @param {object} sources... - objects whose properties are being assigned to the source object
  * @return {object} source with extended properties
  */
-module.exports = function(target, firstSource) {
+export default function(target, firstSource) {
   if (target === undefined || target === null)
     throw new TypeError('Cannot convert first argument to object');
   var to = Object(target);

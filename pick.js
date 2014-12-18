@@ -2,7 +2,7 @@
  * @module 101/pick
  */
 
-var isObject = require('./is-object');
+import isObject from './is-object';
 
 /**
  * Returns a new object with the specified keys (with key values from obj).
@@ -12,7 +12,7 @@ var isObject = require('./is-object');
  * @param {string|array} keys... - keys which will be taken from obj (can be specifieds as args (strings and/or arrays)
  * @return {object|function} Object with only the keys specified from the original obj or Partial-function pick (which accepts obj) and returns an object
  */
-module.exports = function () {
+export default function () {
   var args = Array.prototype.slice.call(arguments);
   if (isObject(args[0])) {
     var obj = args.shift();

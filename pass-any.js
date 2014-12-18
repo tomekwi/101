@@ -2,7 +2,7 @@
  * @module 101/pass-any
  */
 
-var isFunction = require('./is-function');
+import isFunction from './is-function';
 
 /**
  * Muxes arguments across many functions and ||'s the results
@@ -10,7 +10,7 @@ var isFunction = require('./is-function');
  * @param {function} funcs... - functions which return a boolean
  * @return {function} function which accepts args which it applies to funcs and ||s the results
  */
-module.exports = passAny;
+export default passAny;
 
 function passAny (/* funcs */) {
   var funcs = Array.prototype.slice.call(arguments);

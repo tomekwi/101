@@ -12,7 +12,7 @@
  */
 
 // (function)(val)
-module.exports = instanceOf;
+export default instanceOf;
 
 function instanceOf (Class) {
   return function (val) {

@@ -2,8 +2,8 @@
  * @module 101/omit
  */
 
-var isObject = require('./is-object');
-var clone = require('./clone');
+import isObject from './is-object';
+import clone from './clone';
 
 /**
  * Returns a new object without the specified keys.
@@ -13,7 +13,7 @@ var clone = require('./clone');
  * @param {string|array} keys... - keys which will be dropped from obj (can be specifieds as args (strings and/or arrays)
  * @return {object|function} Object without the specified keys from the original obj or Partial-function omit (which accepts obj) and returns an object
  */
-module.exports = function () {
+export default function () {
   var args = Array.prototype.slice.call(arguments);
   if (isObject(args[0])) {
     var obj = args.shift();

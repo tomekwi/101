@@ -2,9 +2,9 @@
  * @module 101/pluck
  */
 
-var isObject = require('./is-object');
-var exists = require('./exists');
-var keypather = require('keypather')();
+import isObject from './is-object';
+import exists from './exists';
+import keypather from 'keypather'();
 
 /**
  * Functional version of obj[key], returns the value of the key from obj.
@@ -15,7 +15,7 @@ var keypather = require('keypather')();
  * @param {boolean} [isKeypath=true] - specifies whether the key is a keypath or key
  * @return {*|function} The value of the key from obj or Partial-function pluck (which accepts obj) and returns the value of the key from obj
  */
-module.exports = function (obj, key, isKeypath) {
+export default function (obj, key, isKeypath) {
   if (!isObject(obj)) {
     isKeypath = key;
     key = obj;

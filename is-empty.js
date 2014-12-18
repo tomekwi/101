@@ -2,8 +2,8 @@
  * @module 101/is-empty
  */
 
-var isString = require('./is-string');
-var isObject = require('./is-object');
+import isString from './is-string';
+import isObject from './is-object';
 var isArray = Array.isArray;
 
 /**
@@ -12,7 +12,7 @@ var isArray = Array.isArray;
  * @param {string|array|object} val - value checked to be a empty
  * @return {boolean} Whether the value is an empty or not
  */
-module.exports = isEmpty;
+export default isEmpty;
 
 function isEmpty (val) {
   if (isString(val) || isArray(val)) {

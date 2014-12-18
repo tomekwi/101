@@ -8,7 +8,7 @@
  * @param {*} val - value checked to be a function
  * @return {boolean} Whether the value is a function or not
  */
-module.exports = isFunction;
+export default isFunction;
 
 function isFunction (v) {
   return typeof v === 'function';

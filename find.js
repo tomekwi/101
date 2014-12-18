@@ -2,9 +2,9 @@
  * @module 101/find
  */
 
-var isFunction = require('./is-function');
-var exists = require('./exists');
-var findIndex = require('./find-index');
+import isFunction from './is-function';
+import exists from './exists';
+import findIndex from './find-index';
 
 /**
  * Finds the first value in the list that passes the given function (predicate) and returns it's index.
@@ -14,7 +14,7 @@ var findIndex = require('./find-index');
  * @param {array|string} predicate - executed on each item in the list and returns true when the item is found
  * @return {*} First item which passes predicate or Partial isFunction (which accepts list)
  */
-module.exports = find;
+export default find;
 
 function find (list, predicate) {
   if (exists(list && list.length) && !isFunction(list)) {

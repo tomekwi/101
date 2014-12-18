@@ -2,9 +2,9 @@
  * @module 101/last
  */
 
-var isObject = require('./is-object');
-var exists = require('./exists');
-var isFunction = require('./is-function');
+import isObject from './is-object';
+import exists from './exists';
+import isFunction from './is-function';
 
 /**
  * Returns the last value of the item.
@@ -12,7 +12,7 @@ var isFunction = require('./is-function');
  * @param {array|string|object} item - item whose last value is returned
  * @return {*} Last value of an array. Last char of a string. Last value of an object. Last char of item.toString() for everything else.
  */
-module.exports = last;
+export default last;
 
 function last (item) {
   var val;

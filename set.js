@@ -2,9 +2,9 @@
  * @module 101/set
  */
 
-var extend = require('extend');
-var isString = require('./is-string');
-var isObject = require('./is-object');
+import extend from 'extend';
+import isString from './is-string';
+import isObject from './is-object';
 
 /**
  * Functional version of obj[key] = val.
@@ -15,7 +15,7 @@ var isObject = require('./is-object');
  * @param {*} val - value of the key being set on obj
  * @return {*|function} New obj with new value set or Partial-function set (which accepts obj) and returns a new obj with val set
  */
-module.exports = set;
+export default set;
 
 function set (obj, key, val) {
   var setObj;
