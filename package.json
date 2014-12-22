@@ -1,5 +1,5 @@
 {
-  "name": "101",
+  "name": "101-es6",
   "version": "0.8.0",
   "description": "common javascript utils that can be required selectively that assume es5+",
   "main": "index.js",
@@ -24,7 +24,13 @@
     "object",
     "string"
   ],
-  "author": "Tejesh Mehta",
+  "contributors":
+    [ { "name": "Tejesh Mehta"
+      }
+    , { "name": "Tomek Wiszniewski"
+      , "email": "t.wiszniewski@gmail.com"
+      }
+    ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tjmehta/101/issues"
